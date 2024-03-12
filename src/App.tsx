@@ -10,29 +10,33 @@ const featured: Article = {
   title: "The Bright Future of Web 3.0?",
   description:
     "We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?",
-  imageUrl: "path_to_featured_image.jpg",
-};
+  imageUrl: "https://github.com/keyule/Frontend-Mentor-News-Homepage/blob/main/src/assets/images/image-web-3-desktop.jpg?raw=true",
+  imageMobileURL: "https://github.com/keyule/Frontend-Mentor-News-Homepage/blob/main/src/assets/images/image-web-3-mobile.jpg?raw=true",
+}
 
 const newArticlesData: Article[] = [
   {
     id: 2,
     title: "Hydrogen VS Electric Cars",
     description: "Will hydrogen-fueled cars ever catch up to EVs?",
-    imageUrl: "path_to_new_article_image_1.jpg",
+    imageUrl: "#",
+    imageMobileURL: "#",
   },
   {
     id: 3,
     title: "The Downsides of AI Artistry",
     description:
       "What are the possible adverse effects of on-demand AI image generation?",
-    imageUrl: "path_to_new_article_image_2.jpg",
+    imageUrl: "#",
+    imageMobileURL: "#",
   },
   {
     id: 4,
     title: "Is VC Funding Drying Up?",
     description:
       "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
-    imageUrl: "path_to_new_article_image_3.jpg",
+    imageUrl: "#",
+    imageMobileURL: "#",
   },
 ];
 
@@ -41,24 +45,28 @@ const bottomArticlesData: Article[] = [
     id: 5,
     title: "Reviving Retro PCs",
     description: "What happens when old PCs are given modern upgrades?",
-    imageUrl: "path_to_bottom_article_image_1.jpg",
+    imageUrl: "https://github.com/keyule/Frontend-Mentor-News-Homepage/blob/main/src/assets/images/image-retro-pcs.jpg?raw=true",
+    imageMobileURL: "#",
   },
   {
     id: 6,
     title: "Top 10 Laptops of 2022",
     description: "Our best picks for various needs and budgets.",
-    imageUrl: "path_to_bottom_article_image_2.jpg",
+    imageUrl: "https://github.com/keyule/Frontend-Mentor-News-Homepage/blob/main/src/assets/images/image-top-laptops.jpg?raw=true",
+    imageMobileURL: "#",
   },
   {
     id: 7,
     title: "The Growth of Gaming",
     description: "How the pandemic has sparked fresh opportunities.",
-    imageUrl: "path_to_bottom_article_image_3.jpg",
+    imageUrl: "https://github.com/keyule/Frontend-Mentor-News-Homepage/blob/main/src/assets/images/image-gaming-growth.jpg?raw=true",
+    imageMobileURL: "#",
   },
 ];
 
 const App: React.FC = () => {
   return (
+    <main className="bg-Off-white h-screen">
       <div className="container mx-auto p-8">
         <Header />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
@@ -71,6 +79,7 @@ const App: React.FC = () => {
         </div>
          <BottomArticles articles = { bottomArticlesData} /> 
         </div>
+      </main>
   );
 };
 
