@@ -66,8 +66,8 @@ const bottomArticlesData: Article[] = [
 
 const App: React.FC = () => {
   return (
-    <main className="bg-Off-white h-screen">
-      <div className="container mx-auto p-8">
+    <main className="bg-Off-white flex items-center justify-center min-h-screen">
+      <div className="container max-w-6xl">
         <Header />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
           <div className="lg:col-span-2">

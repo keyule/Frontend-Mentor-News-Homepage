@@ -7,13 +7,17 @@ interface NewArticlesProps {
 
 const NewArticles: React.FC<NewArticlesProps> = ({ articles }) => {
   return (
-    <aside className="w-full">
+    <aside className="w-full bg-Very-dark-blue h-full">
       <div className="mt-10 lg:mt-0">
-        <h3 className="font-bold text-xl mb-4">New</h3>
-        {articles.map((article) => (
-          <div key={article.id} className="bg-white p-4 rounded-lg shadow-md mb-6">
-            <h4 className="text-lg font-semibold mb-2">{article.title}</h4>
-            <p className="text-gray-600">{article.description}</p>
+        <h3 className="font-bold text-4xl text-Soft-orange p-5">New</h3>
+        {articles.map((article, index) => (
+          <div key={article.id} className={`px-5 pb-5`}>
+            <div className={`${index !== articles.length - 1 ? 'border-b border-Grayish-blue border-opacity-30' : ''}`}>
+              <a href="#">
+                <h4 className="text-xl font-semibold mb-4 text-white hover:text-Soft-orange transition-colors duration-300">{article.title}</h4>
+              </a>
+              <p className="text-Grayish-blue mb-5">{article.description}</p>
+            </div>
           </div>
         ))}
       </div>

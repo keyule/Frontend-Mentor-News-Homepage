@@ -7,13 +7,21 @@ interface FeaturedArticleProps {
 
 const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article }) => {
   return (
-    <div className="h-full bg-blue-100 p-8 rounded-lg">
-      <img src={article.imageUrl} alt={article.title} className="rounded-lg mb-4" />
-      <h2 className="text-3xl font-bold mb-4">{article.title}</h2>
-      <p className="mb-6">{article.description}</p>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Read More
-      </button>
+    <div className="flex flex-col">
+      <img src={article.imageUrl} alt={article.title} className="w-full" style={{ height: '18rem' }} />
+      <div className="flex-1 pt-8 flex md:flex-row">
+        <div className = "md:w-1/2">
+          <h2 className="text-6xl font-extrabold ">{article.title}</h2>
+        </div>
+        <div className="md:w-1/2 flex flex-col justify-between px-5">
+          <p className="text-mg mb-4">{article.description}</p>
+          <div className= "md:w-1/2">
+            <button className="text-xs bg-Soft-red tracking-[.3em] hover:bg-Very-dark-blue text-white font-bold py-4 px-8 transition-colors duration-300 ease-in-out">
+              READ MORE
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
