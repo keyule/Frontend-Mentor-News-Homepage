@@ -69,11 +69,11 @@ const App: React.FC = () => {
     <main className="bg-Off-white flex items-center justify-center min-h-screen">
       <div className="container max-w-6xl">
         <Header />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8 p-5 md:p-0">
           <div className="lg:col-span-2">
             <FeaturedArticle article={featured} />
           </div>
-          <div className="lg:col-span-1 ">
+          <div className="lg:col-span-1 mb-5 md:mb-0">
             <NewArticles articles={newArticlesData} />
           </div>
         </div>
